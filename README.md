@@ -128,7 +128,8 @@ The East did not have any records of subscription cancellations.The West,South a
 
 - #### Subscription Pattern:
 The average subscription duration was 365.3333 days.The Basic subscription type had the most active subscribers(26,250) as against other subscription types which had 7500 active subscribers.
-There was an overall decline in the subscription pattern in 2023. The total subscription for 2022 was 45000 which dropped to 30000 in 2024. The active subscribers in the East region dropped from 11250 in 2022 to 7500,the North and West did not have any active subscriptions in 2023 and the South which did not have any active subscription in 2022 had 7500 active subscribers in 2023. The decline in the other regions should be looked into for possible causes .
+There was an overall decline in the subscription pattern in 2023. The total subscription for 2022 was 45000 which dropped to 30000 in 2024. The active subscribers in the East region dropped from 11250 in 2022 to 7500,the North and West did not have any active subscriptions in 2023 and the South which did not have any active subscription in 2022 had 7500 active subscribers in 2023. The decline in the other regions should be looked into for possible causes so they can be avoided and possible reasons for the increase in the South can be applied to other regions
+
 
 
 
