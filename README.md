@@ -114,6 +114,27 @@ select COUNT([Canceled]) as activesubscriptions from [dbo].[LITA Capstone custom
 where [Canceled]='FALSE'
 ```
 
+#### 4. Visualization
+
+- Created interactive dashboards to visualize:
+
+  - Key Customer Segments
+ 
+  - Subscription cancelations
+ 
+  - Subscription trends 
+
+Some of the visualizations can be seen below;
+
+![customer data visuals 1](https://github.com/user-attachments/assets/ba1ca203-be1a-4c71-bff9-9c17af155ea5)
+
+![customer data visuals 2](https://github.com/user-attachments/assets/e93d0ed3-387e-4a71-8a27-f326762a7d5e)
+
+![customer data visuals 3](https://github.com/user-attachments/assets/1cc0f163-f9a5-4daf-95b5-64ce5899e91a)
+
+![customer data visuals 4](https://github.com/user-attachments/assets/e1e27566-2e32-40e9-9a3c-b43eec23f7eb)
+
+
 ------------------------
 
 ### 💡 Key Findings
