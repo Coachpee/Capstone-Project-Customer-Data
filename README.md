@@ -16,9 +16,9 @@ The dataset used in this project contains sales transactions in 2023 and 2024. I
 - #### Customer ID
 - #### Customer Name
 - #### Region
-- #### Subsription type
-- #### Subsription Start
-- #### Subsription End
+- #### Subscription type
+- #### Subscription Start
+- #### Subscription End
 - #### Canceled
 - #### Revenue
 
@@ -53,14 +53,14 @@ The dataset used in this project contains sales transactions in 2023 and 2024. I
 #### 3. Data Analysis
 
 Here, I used Basic Excel functions to to calculate the average subscription duration and identify the most popular 
-subscription types using the AVG() and COUNTIF Functions. Using the minus formula, I was able to calculate the subscription duration
+subscription types using the AVERAGEIF and COUNTIF Functions. Using the minus formula, I was able to calculate the subscription duration
 for each customer by subtracting the end subscription date from the start subscription date.
 For example; ```=F2-E2```
 
 Below is a sample of the arguments used to run the analysis.
 
 ``` Excel
-=AVERAGE(I2:I75001)
+=AVERAGEIF(G2:G75001,"TRUE",I2:I75001)
 ```
 
 ``` Excel
@@ -127,7 +127,8 @@ All the regions had equal number subscribers with each having a total of 18,750 
 The East did not have any records of subscription cancellations.The West,South and North regions had equal numbers of subscription cancellations (11,250).
 
 - #### Subscription Pattern:
-The average subscription duration was 365.35
+The average subscription duration was 365.3333 days.The Basic subscription type had the most active subscribers(26,250) as against other subscription types which had 7500 active subscribers.
+There was an overall decline in the subscription pattern in 2023. The total subscription for 2022 was 45000 which dropped to 30000 in 2024. The active subscribers in the East region dropped from 11250 in 2022 to 7500,the North and West did not have any active subscriptions in 2023 and the South which did not have any active subscription in 2022 had 7500 active subscribers in 2023. The decline in the other regions should be looked into for possible causes .
 
 
 
