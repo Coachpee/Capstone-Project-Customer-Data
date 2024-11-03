@@ -1,6 +1,26 @@
 # Capstone-Project-Customer-Data
 
-### Project Title : : Customer Segmentation for a Subscription Service
+### Project Outline:
+
+- [Project Title](Project-Title)
+
+- [Project Overview](Project-Overview)
+
+- [Dataset](Dataset)
+
+- [Tools Used](Tools-Used)
+
+- [Analysis Steps](Analysis-Steps)
+
+- [Key Findings](Key-Findings)
+
+- [Recommendations](Recommendations)
+
+- [Conclusion](Conclusion)
+
+  ---------------
+
+### Project Title : Customer Segmentation for a Subscription Service
 
 ### 📊 Project Overview
 
@@ -50,22 +70,27 @@ The dataset used in this project contains sales transactions in 2023 and 2024. I
 
 - Identified most common subscription type
 
+#### *Pivot Table Visualzations:*
+  
+
 #### 3. Data Analysis
 
 Here, I used Basic Excel functions to to calculate the average subscription duration and identify the most popular 
-subscription types using the AVERAGEIF and COUNTIF Functions. Using the minus formula, I was able to calculate the subscription duration
+subscription types using the AVERAGE and COUNTIF Functions. Using the minus formula, I was able to calculate the subscription duration
 for each customer by subtracting the end subscription date from the start subscription date.
 For example; ```=F2-E2```
 
-Below is a sample of the arguments used to run the analysis.
+Below is a sample of the arguments/ Formula used to run the analysis.
 
 ``` Excel
-=AVERAGEIF(G2:G75001,"TRUE",I2:I75001)
+=AVERAGE(I2:I75001)
 ```
+Using the above formula, the Average subscription duration is **365.35.**
 
 ``` Excel
 =COUNTIF($D$2:$D$75001,N10)
 ```
+
 
 With the use of SQL, I was also able to perform some calculations such as the average subscription duration for all customers, total revenue by subscription type. I was also able to gain more insight into customer behaviour by finding the top 3 regions by subscription cancellations, the total number of active and canceled subscriptions, the most popular subscription type by the number of customers, customers with subscriptions longer than 12 months.
 
@@ -77,6 +102,14 @@ Below are some of the queries used;
 select sum([Revenue]) as totalrevenue, [SubscriptionType] from [dbo].[LITA Capstone customer data]
 Group by [SubscriptionType]
 ```
+
+**To retrieve the total number of customers from each region**
+
+```SQL
+select count([CustomerID]) as numberofcustomers, [Region] from [dbo].[LITA Capstone customer data]
+Group by Region
+```
+
 
 **To calculate the average subscription duration for all customers**
 
@@ -91,6 +124,19 @@ select count([CustomerID]) as numberofsubscriptions, [SubscriptionType] from [db
 Group by [SubscriptionType]
 ```
 
+**To find customers who canceled their subscription within 6 months**
+
+```SQL
+alter table [dbo].[LITA Capstone customer data]
+add Subscriptionduration int
+
+update [dbo].[LITA Capstone customer data]
+set [Subscriptionduration] = DATEDIFF(month,[SubscriptionStart],[SubscriptionEnd])
+
+select * from [dbo].[LITA Capstone customer data]
+where [Subscriptionduration] between 0 and 6 and [Canceled]='TRUE'
+```
+
 **To find the top 3 regions by subscription cancellations**
 
 ```SQL
@@ -99,6 +145,14 @@ where [Canceled]='TRUE'
 Group by [Region]
 Order by 1 desc
 ```
+
+**To find customers with subscriptions longer than 12 months**
+
+```SQL
+select * from [dbo].[LITA Capstone customer data]
+where[Subscriptionduration] >12
+```
+
 
 **To find the total number of active subscriptions**
 
