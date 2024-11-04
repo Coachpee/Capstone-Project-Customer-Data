@@ -180,7 +180,7 @@ where[Subscriptionduration] >12
 
 There were no customers who canceled their subscriptions within 12 months.
 
-**To find the total number of active subscriptions**
+**To find the total number of canceled subscriptions**
 
 ```SQL
 select COUNT([Canceled]) as Canceledsubscriptions from [dbo].[LITA Capstone customer data]
@@ -189,7 +189,8 @@ where [Canceled]='TRUE'
 
 The total number of active subscriptions is 33750
 
-**To find the total number of canceled subscriptions**
+
+**To find the total number of active subscriptions**
 
 ```SQL
 select COUNT([Canceled]) as activesubscriptions from [dbo].[LITA Capstone customer data]
@@ -199,8 +200,7 @@ where [Canceled]='FALSE'
 The total number of active subscriptions is 41250
 
 #### 4. Visualization
-
-  - Created interactive dashboards to visualize:
+Created interactive dashboards to visualize:
 
   - Key Customer Segments
  
@@ -208,37 +208,37 @@ The total number of active subscriptions is 41250
  
   - Subscription trends 
 
-Some of the visualizations can be seen below;
+The visualization dashboard is shown below;
 
-![customer data visuals 1](https://github.com/user-attachments/assets/ba1ca203-be1a-4c71-bff9-9c17af155ea5)
-
-![customer data visuals 2](https://github.com/user-attachments/assets/e93d0ed3-387e-4a71-8a27-f326762a7d5e)
-
-![customer data visuals 3](https://github.com/user-attachments/assets/1cc0f163-f9a5-4daf-95b5-64ce5899e91a)
-
-![customer data visuals 4](https://github.com/user-attachments/assets/e1e27566-2e32-40e9-9a3c-b43eec23f7eb)
-
+![cdvisuals 6](https://github.com/user-attachments/assets/d4be9a41-e3be-4677-a5b2-f80eb122bc75)
 
 ------------------------
 
 ### 💡 Key Findings
 
-- #### Most Popular Subscription Type:
-The most popular subscription type is the Basic subscription having a 50% subscription out of the 75,000 customers.
+- #### Subscription Type:
+The most popular subscription type is the Basic subscription with a total of 37,500 subscribers followed by the Premium and Standard subscriptions with each having a total of 18,750 subscribers. The Basic subscription dropped from 22,500 in 2022 to 15,000 in 2023, while the Standard and Premium subcriptions dropped from 11,250 to 7,500 in 2023. Out of the 149.8 million revenue generated, the Basic subscription was the highest source with a total of 74,8 million, followed by the Premium subscription with 37.6 million and then Standard subscription with 37.5 million.
 
-
-
-
+![cdvisuals 3](https://github.com/user-attachments/assets/5547ec98-65d5-41c6-b78f-c6b2b8449cac)
+![cdvisuals 7JPG](https://github.com/user-attachments/assets/f9be9d94-e4c0-4057-9a0b-4e4ecb59378d)
+![cdvisuals 7](https://github.com/user-attachments/assets/494be9e1-67fe-4597-b511-d983b51d0a02)
 
 
 - #### Geographical Trends:
-The South, West regions had only Premium and Standard respectively whereas the East and North regions had only Basic subcribers. 
-All the regions had equal number subscribers with each having a total of 18,750 subscribers.
-The East did not have any records of subscription cancellations.The West,South and North regions had equal numbers of subscription cancellations (11,250).
+The South, West regions had only Premium and Standard subscribers respectively whereas the East and North regions had only Basic subscribers. 
+All the regions had equal number subscribers with each having a total of 18,750 subscribers. Each regions had 7500 subscribers in 2023 and 11,250 in 2022.
+The East did not have any records of subscription cancellations. The active subscribers in the East region dropped from 11250 in 2022 to 7500,in the North and West, there were 7,500 active subscribers and 3,750 canceled subscriptions and in 2023, there were no active subscriptions. All 7,500 subscriptions were canceled. The South had no active subscribers with 11,250 canceled subscriptions in 2022 and 7,500 active subscriptions with no canceled subscriptions in 2023.
+
+![cdvisuals 9](https://github.com/user-attachments/assets/b5a1ffc5-c4dc-45e3-9905-0bd489a7e206)
 
 - #### Subscription Pattern:
-The average subscription duration was 365.3333 days.The Basic subscription type had the most active subscribers(26,250) as against other subscription types which had 7500 active subscribers.
-There was an overall decline in the subscription pattern in 2023. The total subscription for 2022 was 45000 which dropped to 30000 in 2024. The active subscribers in the East region dropped from 11250 in 2022 to 7500,the North and West did not have any active subscriptions in 2023 and the South which did not have any active subscription in 2022 had 7500 active subscribers in 2023. The decline in the other regions should be looked into for possible causes so they can be avoided and possible reasons for the increase in the South can be applied to other regions
+The average subscription duration was 365.35 days. Between 2022 and 2023, there was a total of 41,250 active subscribers and 33,750 canceled subscriptions. The Basic subscription type had the most active subscribers(26,250) as against other subscription types which had 7500 active subscribers each.
+
+There was an overall decline in the subscription pattern in 2023. The total subscription for 2022 was 45000 which dropped to 30000 in 2024 which also affected the total revenue, causing it to drop from 89.9 million in 2022 to 59.9 million in 2023. There was fewer number of canceled subscriptions in 2022(15,000) compared to 2023(18,750). The number of active subscribers dropped from 26,250 in 2022 to 15,000 in 2023. , and the South which did not have any active subscription in 2022 had 7500 active subscribers in 2023. The decline in the other regions should be looked into for possible causes so they can be avoided and possible reasons for the increase in the South can be applied to other regions
+
+![cdvisuals 4](https://github.com/user-attachments/assets/9c72a24a-6ca7-4951-ba41-d214d9c5a3c6)
+
+![cdvisuals 5](https://github.com/user-attachments/assets/786ca614-9188-43d6-88b1-98a345524609)
 
 
 
