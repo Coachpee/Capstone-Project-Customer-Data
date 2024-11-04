@@ -76,7 +76,7 @@ The dataset used in this project contains sales transactions in 2023 and 2024. I
 #### 3. Data Analysis
 
 Here, I used Basic Excel functions to to calculate the average subscription duration and identify the most popular 
-subscription types using the AVERAGE and COUNTIF Functions. Using the minus formula, I was able to calculate the subscription duration
+subscription type using the AVERAGE and COUNTIF Functions. Using the minus formula, I was able to calculate the subscription duration
 for each customer by subtracting the end subscription date from the start subscription date.
 For example; ```=F2-E2```
 
@@ -91,6 +91,9 @@ Using the above formula, the Average subscription duration is **365.35.**
 =COUNTIF($D$2:$D$75001,N10)
 ```
 
+![cdvisuals 1](https://github.com/user-attachments/assets/35864c75-d9ec-4276-97ef-d9885841d28a)
+
+From the above analysis, the most popular subscription type is the Basic subscription with a count of 37,500 subscriptions.
 
 With the use of SQL, I was also able to perform some calculations such as the average subscription duration for all customers, total revenue by subscription type. I was also able to gain more insight into customer behaviour by finding the top 3 regions by subscription cancellations, the total number of active and canceled subscriptions, the most popular subscription type by the number of customers, customers with subscriptions longer than 12 months.
 
@@ -109,6 +112,7 @@ Group by [SubscriptionType]
 select count([CustomerID]) as numberofcustomers, [Region] from [dbo].[LITA Capstone customer data]
 Group by Region
 ```
+![cdsql1](https://github.com/user-attachments/assets/3edd28c6-2e4f-4170-b2ee-6a667cdcc26a)
 
 
 **To calculate the average subscription duration for all customers**
@@ -117,12 +121,17 @@ Group by Region
 select AVG([Subscriptionduration]) as averagesubscriptionduration from [dbo].[LITA Capstone customer data]
 ```
 
+The average subscription duration is **12months**
+
 **To find the most popular subscription type by the number of customers**
 
 ```SQL
 select count([CustomerID]) as numberofsubscriptions, [SubscriptionType] from [dbo].[LITA Capstone customer data]
 Group by [SubscriptionType]
 ```
+![cdsql2](https://github.com/user-attachments/assets/2153af2f-31b8-409a-a375-a42579426e34)
+
+The most popular subscription typeisthe Basic subscription.
 
 **To find customers who canceled their subscription within 6 months**
 
@@ -137,6 +146,8 @@ select * from [dbo].[LITA Capstone customer data]
 where [Subscriptionduration] between 0 and 6 and [Canceled]='TRUE'
 ```
 
+There were no customers who canceled their subscriptions within 6 months.
+
 **To find the top 3 regions by subscription cancellations**
 
 ```SQL
@@ -145,6 +156,9 @@ where [Canceled]='TRUE'
 Group by [Region]
 Order by 1 desc
 ```
+![cdsql3](https://github.com/user-attachments/assets/7ea84799-8ca4-4a2f-8dc1-792285411d44)
+
+The top 3 regions by Subscription cancellations were
 
 **To find customers with subscriptions longer than 12 months**
 
