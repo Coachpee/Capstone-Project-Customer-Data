@@ -71,7 +71,16 @@ The dataset used in this project contains sales transactions in 2023 and 2024. I
 - Identified most common subscription type
 
 #### *Pivot Table Visualzations:*
-  
+
+![cdpt6](https://github.com/user-attachments/assets/65318678-b327-4e3b-bfaa-f79e3823168b)
+![cdpt4](https://github.com/user-attachments/assets/3e359752-ea9c-47b7-a869-b61814c62975)
+![cdpt1](https://github.com/user-attachments/assets/98091786-f77f-4d44-991b-8f8ce0958380)
+![cdpt2](https://github.com/user-attachments/assets/00e8e72a-92c7-4ab7-bfea-d7211ea28547)
+
+![cdpt3](https://github.com/user-attachments/assets/e5deda9b-0f8b-444a-8db7-7c47852b52ba)
+![cdpt5](https://github.com/user-attachments/assets/5b52a189-5f07-451f-b705-d99db592515b)
+
+
 
 #### 3. Data Analysis
 
@@ -106,6 +115,8 @@ select sum([Revenue]) as totalrevenue, [SubscriptionType] from [dbo].[LITA Capst
 Group by [SubscriptionType]
 ```
 
+![cdsql4](https://github.com/user-attachments/assets/419a8b4b-596c-4ff2-b549-73eddb7e4d52)
+
 **To retrieve the total number of customers from each region**
 
 ```SQL
@@ -113,7 +124,6 @@ select count([CustomerID]) as numberofcustomers, [Region] from [dbo].[LITA Capst
 Group by Region
 ```
 ![cdsql1](https://github.com/user-attachments/assets/3edd28c6-2e4f-4170-b2ee-6a667cdcc26a)
-
 
 **To calculate the average subscription duration for all customers**
 
@@ -131,7 +141,7 @@ Group by [SubscriptionType]
 ```
 ![cdsql2](https://github.com/user-attachments/assets/2153af2f-31b8-409a-a375-a42579426e34)
 
-The most popular subscription typeisthe Basic subscription.
+The most popular subscription type is the Basic subscription.
 
 **To find customers who canceled their subscription within 6 months**
 
@@ -158,7 +168,8 @@ Order by 1 desc
 ```
 ![cdsql3](https://github.com/user-attachments/assets/7ea84799-8ca4-4a2f-8dc1-792285411d44)
 
-The top 3 regions by Subscription cancellations were
+The top 3 regions by Subscription cancellations were the North, South and West.
+
 
 **To find customers with subscriptions longer than 12 months**
 
@@ -167,6 +178,7 @@ select * from [dbo].[LITA Capstone customer data]
 where[Subscriptionduration] >12
 ```
 
+There were no customers who canceled their subscriptions within 12 months.
 
 **To find the total number of active subscriptions**
 
@@ -175,6 +187,8 @@ select COUNT([Canceled]) as Canceledsubscriptions from [dbo].[LITA Capstone cust
 where [Canceled]='TRUE'
 ```
 
+The total number of active subscriptions is 33750
+
 **To find the total number of canceled subscriptions**
 
 ```SQL
@@ -182,9 +196,11 @@ select COUNT([Canceled]) as activesubscriptions from [dbo].[LITA Capstone custom
 where [Canceled]='FALSE'
 ```
 
+The total number of active subscriptions is 41250
+
 #### 4. Visualization
 
-- Created interactive dashboards to visualize:
+  - Created interactive dashboards to visualize:
 
   - Key Customer Segments
  
@@ -209,6 +225,11 @@ Some of the visualizations can be seen below;
 
 - #### Most Popular Subscription Type:
 The most popular subscription type is the Basic subscription having a 50% subscription out of the 75,000 customers.
+
+
+
+
+
 
 - #### Geographical Trends:
 The South, West regions had only Premium and Standard respectively whereas the East and North regions had only Basic subcribers. 
