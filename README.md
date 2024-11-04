@@ -249,6 +249,5 @@ Also, considering that the South and the East achieved a Zero(0) cancellation in
 It is also important to introduce personalized engagement initiatives for low-engagemetcustmers, especially customers,especially those on Low-tier plan.
 
 ### 📘 Conclusion:
-The customer segmentation analysis provided valuable insights into the behavioral,and geographical characteristics of our subscription service's customer base. By categorizing customers based in regional data and subscription plans. we identified distinct segments that can guide targeted marketting and retention stratgies.                                         
-                                                                                                                                                           ### 📘 Conclusion:
-emogr dghts into the
+The customer segmentation analysis provided valuable insights into the behavioral,and geographical characteristics of our subscription service's customer base. By categorizing customers based in regional data and subscription plans, we identified distinct segments that can guide targeted marketing and retention strategies.                                         
+                                                                                                                                                    
